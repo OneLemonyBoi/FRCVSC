@@ -13,7 +13,7 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 /** An example command that uses an example subsystem. */
 public class MoveDriveTrain extends CommandBase {
   @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
-  private final DriveTrain m_driveTrain;
+  private final DriveTrain m_driveTrainSubsystem;
   private final DoubleSupplier m_UD;
   private final DoubleSupplier m_LR;
 
@@ -23,7 +23,7 @@ public class MoveDriveTrain extends CommandBase {
    * @param subsystem The subsystem used by this command.
    */
   public MoveDriveTrain(DriveTrain driveTrain, DoubleSupplier UD, DoubleSupplier LR) {
-    m_driveTrain = driveTrain;
+    m_driveTrainSubsystem = driveTrain;
     m_UD = UD;
     m_LR = LR;
     // Use addRequirements() here to declare subsystem dependencies.
@@ -37,7 +37,7 @@ public class MoveDriveTrain extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    m_driveTrain.arcadeDrive(m_UD, m_LR);
+    m_driveTrainSubsystem.arcadeDrive(m_UD, m_LR);
   }
 
   // Called once the command ends or is interrupted.
