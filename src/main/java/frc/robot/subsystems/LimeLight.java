@@ -14,7 +14,7 @@ public class LimeLight extends SubsystemBase {
 
   }
 
-  public static Double[] getData() {
+  public Double[] getData() {
     /*
       tv - Valid Targets (0 or 1)
       tx - Horizontal Offset From Center To Target (-27 - 27)
