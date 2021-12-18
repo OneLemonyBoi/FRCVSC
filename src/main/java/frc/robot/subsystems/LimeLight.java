@@ -10,10 +10,6 @@ import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class LimeLight extends SubsystemBase {
-  public LimeLight() {
-
-  }
-
   public Double[] getData() {
     /*
       tv - Valid Targets (0 or 1)
